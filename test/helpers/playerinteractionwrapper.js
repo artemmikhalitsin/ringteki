@@ -578,7 +578,7 @@ class PlayerInteractionWrapper {
             throw new Error(`${ring} is not a valid ring selection`);
         }
         if(_.isString(province)) {
-            province = this.findCardByName(province, 'any', 'opponent');
+            province = this.findCardByName(province, 'provinces', 'opponent');
         } else if(!province) {
             province = this.findCard(card => card.isProvince && card.location === 'province 1', 'opponent');
         }
